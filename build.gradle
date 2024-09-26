@@ -1,0 +1,29 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.10.0'
+    id 'java'
+}
+
+group 'com.adebesin'
+version '2.04.2-SNAPSHOT'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = []
+        }
+        resources {
+            srcDir 'resources'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = "2022.1.1"
+    type = "IU"
+    updateSinceUntilBuild = false
+}
